@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <title>Galderma</title>
+
+  <!-- Linking CSS Style files -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Linking JS files -->
+  <script defer src="./js/index.js"></script>
+  <!-- Montserrat font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet"> 
+
+</head>
+<body>  
+  <div class="form-container">
+    <input type="checkbox" class="valueBack">
+
+    <form action="" class="form">
+      <!-- ***** SLIDER ***** -->
+      <div class="form__slider">
+        <!-- ****** PROGRESS BAR ***** -->
+        <ul class="form__progress-bar">
+          <li class="form__step"></li>
+          <li class="form__step"></li>
+          <li class="form__step"></li>
+          <li class="form__step"></li>
+          <li class="form__step"></li>
+        </ul>   
+ 
+        <div class="field-container">
+          <!-- General Info --> 
+          <div class="form__slide general">
+            <div class="form__title">General Information</div>
+    
+            <div class="form__field">
+              <input name="fullName" id="fullName" class="form__input" type="text" placeholder="Full Name" pattern="^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$" required>
+              <label for="fullName" class="form__label">Full Name</label>
+            </div> 
+              
+            <div class="form__grid-container2">
+              <div class="form__field"> 
+                <!-- <input name="gender" list="genderList" id="gender" class="form__input" type="text" placeholder="Gender" required>
+                <label for="gender" class="form__label">Gender</label>
+                <datalist id="genderList"> 
+                  <option value="Male"></option>
+                  <option value="Female"></option>
+                </datalist> -->
+                <select name="gender" id="gender" class="form__input">
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+                <label for="gender" class="form__label">Gender</label>
+              </div> 
+    
+              <div class="form__field">
+                <input name="nation" id="nationality" class="form__input" type="text" placeholder="Nationality" pattern="^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$" required>
+                <label for="nationality" class="form__label">Nationality</label>
+              </div> 
+    
+              <div class="form__field">
+                <!-- <input id="dateOfBirth" class="form__input" type="date" placeholder="Date of Birth" required> -->
+                <input name="dateOfBirth" id="dateOfBirth" class="form__input date" type="text" name="input" placeholder="Date of Birth (dd/mm/yyyy)" required 
+                pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))" title="Enter a date in this format YYYY-MM-DD"/>
+                <label for="dateOfBirth" class="form__label">Date of Birth</label>
+              </div>  
+      
+              <div class="form__field"> 
+                <input name="location" id="location" class="form__input" type="text" placeholder="Location" pattern="^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$" required>
+                <label for="location" class="form__label">Location</label>
+              </div> 
+    
+              <div class="form__field">
+                <input name="position" id="position" class="form__input" type="text" placeholder="Position" pattern="^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$" required>
+                <label for="position" class="form__label">Position</label>
+              </div> 
+    
+              <div class="form__field">
+                <!-- <input id="dateOfHire" class="form__input" type="date" placeholder="Date of Hire" required> -->
+                <input name="dateOfHire" id="dateOfHire" class="form__input date" type="text" placeholder="Date of Hire (dd/mm/yyyy)" required pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))">
+                <label for="dateOfHire" class="form__label">Date of Hire</label>
+              </div> 
+            </div>
+    
+            <div class="form__grid-container2">
+              <div class="form__field">
+                <input id="uaeCard" class="form__input" type="text" placeholder="UAE Labour Card" pattern="^\S*$" required>
+                <label for="uaeCard" class="form__label">UAE Labor Card</label>
+              </div> 
+    
+              <div class="form__field">
+                <input id="passport" class="form__input" type="text" placeholder="Passport" pattern="^\S*$" required>
+                <label for="position" class="form__label">Passport</label>
+              </div> 
+            </div>
+          </div>
+    
+          <!-- Contact Info  first 2 remain--> 
+          <div class="form__slide contact"> 
+            <div class="form__title">Contact Information</div>
+    
+            <div class="form__field">
+              <input name="homeAddress" id="homeAddress" class="form__input" type="text" placeholder="Home Country Address" pattern="^[A-Za-z0-9 ]+$" required>
+              <label for="homeAddress" class="form__label">Home Country Address</label>
+            </div> 
+  
+            <div class="form__field">
+              <input name="uaeAddress" id="uaeAddress" class="form__input" type="text" placeholder="UAE Address" pattern="^[A-Za-z0-9 ]+$" required>
+              <label for="uaeAddress" class="form__label">UAE Address</label>
+            </div> 
+  
+            <div class="form__grid-container2">
+              <div class="form__field">
+                <input name="homePhone" id="homePhone" class="form__input" type="text" placeholder="Home Country Phone (91-1234567890)" pattern="[0-9]{2}-[0-9]{10}" required>
+                <label for="homePhone" class="form__label">Home Country Phone</label>
+              </div> 
+  
+              <div class="form__field">
+                <input name="uaePhone" id="uaePhone" class="form__input" type="text" placeholder="UAE Home Phone (91-1234567890)" pattern="[0-9]{2}-[0-9]{10}" required>
+                <label for="uaePhone" class="form__label">UAE Home Phone</label>
+              </div> 
+  
+              <div class="form__field">
+                <input name="uaeMobile" id="uaeMobile" class="form__input" type="text" placeholder="UAE Mobile Phone (91-1234567890)" pattern="[0-9]{2}-[0-9]{10}" required>
+                <label for="uaeMobile" class="form__label">UAE Mobile Phone</label> 
+              </div> 
+  
+              <div class="form__field">
+                <input name="emailContact" id="email" class="form__input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email Address" required> 
+                <label for="email" class="form__label">Email Address</label>
+              </div> 
+            </div>
+          </div>
+  
+          <!-- Family Status -->
+          <div class="form__slide family">
+            <div class="form__title">Family Status</div>
+  
+            <div class="form__grid-container2">
+              <div class="form__field">
+                <!-- <input name="maritial" list="maritials" id="maritial" class="form__input" type="text" placeholder="Maritial Status" required>
+                <label for="maritial" class="form__label">Maritial Status</label>
+                <datalist id="maritials">
+                  <option value="Single"></option>
+                  <option value="Married"></option>
+                </datalist> -->
+
+                <select class="form__input" name="maritial" id="maritial">
+                  <option value="Single">Single</option>
+                  <option value="Married">Married</option>
+                </select>
+                <label for="maritial" class="form__label">Maritial Status</label>
+              </div> 
+  
+              <div class="form__field">
+                <!-- <input name="children" list="child" id="children" class="form__input" type="text" placeholder="Children" required>
+                <label for="children" class="form__label">Children</label>
+                <datalist id="child">
+                  <option value="Yes"></option>
+                  <option value="No"></option>
+                </datalist> -->
+
+                <select class="form__input" name="children" id="children">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+                <label for="children" class="form__label">Children</label>
+              </div> 
+  
+              <div class="form__field">
+                <input name="spouseName" id="spouseName" class="form__input" type="text" placeholder="Spouse's Name" pattern="^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$" required>
+                <label for="spouseName" class="form__label">Spouse's Name</label>
+              </div> 
+  
+              <div class="form__field">
+                <input name="spouseOccupation" id="spouseOccupation" class="form__input" type="text" placeholder="Spouse's Occupation" pattern="^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$" required>
+                <label for="spouseOccupation" class="form__label">Spouse's Occupation</label>
+              </div> 
+            </div>
+          </div> 
+  
+          <!-- Emergency Contact -->
+          <div class="form__slide emergency">
+            <div class="form__title">Emergency Contact</div>
+  
+            <div class="form__grid-container2">
+              <div class="form__field">
+                <input name="ename" id="eName" class="form__input" type="text" placeholder="Name" pattern="^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$" required>
+                <label for="eName" class="form__label">Name</label>
+              </div> 
+  
+              <div class="form__field">
+                <input name="relationship" id="realtion" class="form__input" type="text" placeholder="Relationship" pattern="^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$" required>
+                <label for="realtion" class="form__label">Relationship</label>
+              </div> 
+  
+              <div class="form__field">
+                <input name="eAddress" id="eAddress" class="form__input" type="text" placeholder="Address" pattern="^[A-Za-z0-9 ]+$" required>
+                <label for="eAddress" class="form__label">Address</label>
+              </div> 
+  
+              <div class="form__field">
+                <input name="ePhone" id="ePhone" class="form__input" type="text" placeholder="Phone (91-1234567890)" pattern="[0-9]{2}-[0-9]{10}" required>
+                <label for="ePhone" class="form__label">Phone</label>
+              </div> 
+            </div>
+          </div>
+  
+          <!-- Banking Information -->
+          <div class="form__slide banking">
+            <div class="form__title">Banking Information</div>
+  
+            <div class="form__grid-container2">
+              <div class="form__field">
+                <input name="bankName" id="bankName" class="form__input" type="text" placeholder="Bank Name" pattern="^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$" required>
+                <label for="bankName" class="form__label">Bank Name</label>
+              </div> 
+  
+              <div class="form__field">
+                <input name="branch" id="branch" class="form__input" type="text" placeholder="Branch" pattern="^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$" required>
+                <label for="branch" class="form__label">Branch</label>
+              </div> 
+  
+              <div class="form__field">
+                <input name="account" id="account" class="form__input" type="text" placeholder="Account" pattern="^\S*$" required>
+                <label for="account" class="form__label">Account</label>
+              </div> 
+  
+              <div class="form__field">
+                <input name="iban" id="iban" class="form__input" type="text" placeholder="IBAN" pattern="^\S*$" required>
+                <label for="iban" class="form__label">IBAN</label>
+              </div> 
+            </div>
+          </div>
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="form__button-contain">
+          <button class="form__btn" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+          <button class="form__btn" id="nextBtn" onclick="nextPrev(1)">Next</button> 
+        </div>
+      </div> 
+    </form>
+  </div>
+</body>
+</html>
